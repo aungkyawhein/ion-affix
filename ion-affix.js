@@ -179,7 +179,7 @@ angular.module('ion-affix', ['ionic'])
 
 
                 angular.element($ionicScroll.element).on('scroll', function (event) {
-                    var scrollTop = (event.detail || event.originalEvent && event.originalEvent.detail).scrollTop;
+                    var scrollTop = (event.detail || event.originalEvent && event.originalEvent.detail || event.target).scrollTop;
                     // when scroll to top, we should always execute the immediate calculation.
                     // this is because of some weird problem which is hard to describe.
                     // if you want to experiment, always use the throttled one and just click on the page
